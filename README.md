@@ -6,6 +6,8 @@
 
 **One workflow for edge AI on ESP32 and STM32.**
 
+![MCUflow-Edge Banner](docs/mcuflow_edge_banner.png)
+
 MCUflow-Edge helps embedded developers capture sensor data, build reproducible datasets, package tiny models, deploy them to real boards, and benchmark the result — all with one consistent CLI.
 
 ## Why?
