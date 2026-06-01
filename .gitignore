@@ -1,0 +1,30 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.venv/
+.eggs/
+*.egg
+
+# IDE
+.vscode/
+.idea/
+
+# Testing & linting caches
+.pytest_cache/
+.ruff_cache/
+
+# Firmware build artifacts
+firmware/esp32-idf-template/build/
+firmware/stm32-cube-template/Build/
+firmware/stm32-cube-template/Debug/
+
+# Project artifacts (generated at runtime)
+artifacts/
+sessions/
+reports/
+
+# OS
+.DS_Store
+Thumbs.db

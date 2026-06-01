@@ -1,0 +1,6 @@
+labels:
+  - idle
+  - shake
+  - tilt_left
+  - tilt_right
+  - tap

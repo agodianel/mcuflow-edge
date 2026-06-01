@@ -1,0 +1,63 @@
+[project]
+name = "mcuflow-edge"
+version = "0.1.0"
+description = "Unified edge AI workflow for ESP32 and STM32: capture, package, deploy, benchmark."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+authors = [
+    { name = "agodianel" },
+]
+keywords = ["edge-ai", "tinyml", "esp32", "stm32", "embedded", "microcontroller", "tflite"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Embedded Systems",
+]
+dependencies = [
+    "click>=8.1",
+    "pyserial>=3.5",
+    "pydantic>=2.0",
+    "numpy>=1.26",
+    "tflite>=2.18.0",
+    "pyyaml>=6.0.3",
+]
+
+[project.scripts]
+mcue = "mcuflow_edge.cli.main:cli"
+
+[project.urls]
+Homepage = "https://github.com/agodianel/mcuflow-edge"
+Repository = "https://github.com/agodianel/mcuflow-edge"
+Issues = "https://github.com/agodianel/mcuflow-edge/issues"
+Documentation = "https://github.com/agodianel/mcuflow-edge/tree/main/docs"
+
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["mcuflow_edge*"]
+
+[tool.uv]
+package = true
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.11",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
